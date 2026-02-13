@@ -1,6 +1,6 @@
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
-size = 17
+size = 15
 
 [window]
 decorations = "None"

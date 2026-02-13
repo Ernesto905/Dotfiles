@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # =================================
-# bashrc++ 
+# bashrc++
 # =================================
 if [[ -r ~/.bashrc_local ]]; then
   . ~/.bashrc_local
@@ -22,7 +22,7 @@ fi
 PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 
 set -o vi
-export EDITOR=nvim 
+export EDITOR=nvim
 export VISUAL=nvim
 
 # =================================
@@ -42,24 +42,24 @@ fv() {
   fi
 }
 
-# fuzzy cd 
+# fuzzy cd
 fd() {
   local dir
-  dir=$(find ${1:-.} -type d 2> /dev/null | fzf +m) && cd "$dir"
+  dir=$(find ${1:-.} -type d 2>/dev/null | fzf +m) && cd "$dir"
 }
 
 # fuzzy manslaughter
 fkill() {
-    local pid
-    if [ "$UID" != "0" ]; then
-        pid=$(ps -f -u $UID | sed 1d | fzf -m | awk '{print $2}')
-    else
-        pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
-    fi
+  local pid
+  if [ "$UID" != "0" ]; then
+    pid=$(ps -f -u $UID | sed 1d | fzf -m | awk '{print $2}')
+  else
+    pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+  fi
 
-    if [ "x$pid" != "x" ]
-    then
-        echo $pid | xargs kill -${1:-9}
-    fi
+  if [ "x$pid" != "x" ]; then
+    echo $pid | xargs kill -${1:-9}
+  fi
 }
 
+#
