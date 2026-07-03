@@ -6,3 +6,5 @@ alias path='echo $PATH | tr ":" "\n"'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias tu="tmux new-sess -t utils"
 alias ta="tmux new-sess -t main"
+alias tb="tmux new-sess -t side"
+alias vpy="python3 -m venv /tmp/venv && . /tmp/venv/bin/activate"

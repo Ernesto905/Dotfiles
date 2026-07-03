@@ -22,7 +22,7 @@ return {
 
         picker = {
             hidden = true,
-            ignored = false,
+            ignored = true,
             exclude = excluded,
         },
     },
